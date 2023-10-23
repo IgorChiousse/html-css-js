@@ -303,7 +303,7 @@ function div() {
     let x = document.getElementById("map12").value;
     let y = document.getElementById("map13").value;
     let reponse = x / y;
-    textbox11.innerHTML = reponse.toFixed(1) +"<br>"+ reponse.toFixed(Math.ceil)+"<br>"+ Math.floor(reponse)+"<br>"+ reponse.toFixed(2);
+    textbox11.innerHTML = Math.round(reponse) +"<br>"+ (Math.ceil(reponse))+"<br>"+ Math.floor(reponse)+"<br>"+ reponse.toFixed(2);
 }
 // let x = prompt("entrez un chiffre");
 // let y = prompt("entrez un 2eme chiffre");
