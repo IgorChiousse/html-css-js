@@ -326,3 +326,113 @@ function push11() {
     
     textbox12.innerHTML = rep;
 }
+
+// let jours = new Array("lun","mar","merc","jeu","vend","sam","dim");
+// let str = "";
+// for (var i = 0; i < jours.length; i++) {
+//     str += jours[i] + " ";
+// }
+// console.log(jours);
+
+// tab=new Array("A","B",10);
+// tab.join(" ");
+// console.log(tab);
+
+// tab=new Array("A","B",10);
+// tab.reverse();
+// console.log(tab);
+
+// tab=new Array("A","B",10);
+// tab.sort();
+// console.log(tab);
+
+// let nom=[4,8,1000,1500];
+// console.log(nom.every(function(valeur){
+//     return(valeur%2==0);
+// }));
+
+// var jours = new Array("lun","mar","merc","jeu","vend","sam","dim");
+// var maj = jours.map(function(j){
+//      return j.toUpperCase();
+// })
+// console.log(maj.toString());
+
+// let sport = ["plongée", "baseball"];
+// console.log(sport.push("football","tennis"));
+// console.log(sport);
+
+// let items =["item1", "item2", "items3"]
+// let copie = [];
+
+// items.forEach(function(item){
+//     copie.push(item);
+// });console.log(copie);
+
+// let jours =["item1", "item2", "items3","item4", "item5", "items6"]
+// let days = jours;
+// days[0]="mon";
+// console.log(jours);
+// console.log(days);
+
+// let jours =["item1", "item2", "items3","item4", "item5", "items6"]
+// let days = [];
+// for (let i=0; i<jours.length; i++){
+// days[i]=jours[i];
+// }
+// days[0]="mon";
+// console.log(jours);
+// console.log(days);
+
+// var monnaies = [];
+// monnaies["EUR"]="Euro";
+// monnaies["USD"]="Dollar américain";
+// monnaies["BTC"]="Bitcoin";
+// console.table(monnaies);
+// console.log(monnaies.length);
+// // for (var code in monnaies) {
+// //     console.log(code+" : "+monnaies[code]);
+// // }
+// if (typeof monnaies["YEN"] !== "undefined") {
+
+// } else {
+//     console.log("indice YEN manquant !");
+// }
+
+// let clients = [];
+// clients["Pierre"] = [24,5,807];
+// clients["Paul"] = [37,3,462];
+// console.table(clients["Pierre"][2], clients["Paul"][0]);//récupère 807 de Pieere et 37 de Paul
+
+
+let button13=document.getElementById("push12");
+button13.addEventListener("click", push12);
+let textbox13=document.getElementById("text13");
+
+function push12() {
+    let elt = document.getElementById("map15").value;
+    let tab = [3, 25, 94, 1980, 12, 487];
+    if (elt < tab.length){
+        for (let i=0; i < tab.length; i++) {
+            // i=2
+            if (elt == i) {
+                textbox13.innerHTML = (i + "    "+tab[i]);
+            } 
+            
+        }
+    }
+}
+
+let button14 = document.getElementById("push14");
+button14.addEventListener("click", push14);
+let textbox14 = document.getElementById("text14");
+
+function push14() {
+    let a = document.getElementById("map16").value;
+    let b = document.getElementById("map17").value;
+    let c = document.getElementById("map18").value;
+    let d = document.getElementById("map19").value;
+    let n = [];
+    let x = n.push(a, b, c, d);
+    n.reverse();
+    textbox14.innerHTML = (n);
+}
