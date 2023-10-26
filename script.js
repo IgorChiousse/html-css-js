@@ -432,7 +432,223 @@ function push14() {
     let c = document.getElementById("map18").value;
     let d = document.getElementById("map19").value;
     let n = [];
-    let x = n.push(a, b, c, d);
+    n.push(a, b, c, d);
     n.reverse();
-    textbox14.innerHTML = (n);
+    textbox14.innerHTML = n;
+}
+
+// let tabs = [3, 25, 0, 1980, 0, 487];
+// let x = tabs.indexOf(0);
+// let y = x.shift();
+
+// console.log(tabs);
+
+let button15 = document.getElementById("push15");
+button15.addEventListener("click", push15);
+let textbox15 = document.getElementById("text15");
+
+function push15() {
+    
+    let mot = document.getElementById("map20").value;
+    let lettre = document.getElementById("map21").value;
+    mot = mot.split('');
+    let nbre_de_fois_trouve = 0;
+    
+    for(let i = 0; i < mot.length; i++) {
+        if(lettre == mot[i])
+            nbre_de_fois_trouve++;
+        }
+        textbox15.innerHTML = ("il y a " +nbre_de_fois_trouve+ " fois la lettre " +lettre+ " dans le mot " +mot);
+    }
+
+// let usermot = prompt("entrez un mot");
+// function longueurstr(mot) {
+//     return console.log(mot.length);
+// }
+// longueurstr(usermot);
+// longueurstr("coucou");
+    
+// let usermot = prompt("entrez un mot");
+// let userlettre = prompt("entrez une lettre a effacer");
+
+
+// function suppr(mots, lettre) {
+//     mots = mots.split("");
+//     let nbre_de_fois_trouve = 0;
+//     for(i=0;i<mots.length;i++){
+//         if(lettre == mots[i])
+//             nbre_de_fois_trouve++;
+//     }
+   
+//     return console.log(mots);
+// }
+// suppr(usermot, userlettre);
+
+// String.prototype.enleveVoyelles = function() {
+
+//     var consonnes = ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Z"];
+    
+//     var resultat = "";
+    
+//     for (var i = 0; i<this.length; i++) {
+    
+//      for (var j = 0; j<consonnes.length; j++) {
+    
+//       if (this.charAt(i).toUpperCase() == consonnes[j]) {
+    
+//        resultat += this.charAt(i);
+    
+//       }
+    
+//      }
+    
+//     }
+    
+//     console.log(this+" sans les voyelles donne: "+resultat);
+    
+//     };
+
+// let nom_variable = nom_variable.replace(caractere_a_remplacer, "")
+
+
+/////////////////////////////////////CORRECTION/////////////////////////////
+
+// let usermot = prompt("entrez un mot");
+// let usercaractere = prompt("entrerz un caractere");
+// // Déclarer la fonction occuStr qui va demander un mot a l'utilisateur
+// //Dans les parametre nous allons mettre le caractere et un mot
+// function occuStr(mot, caractere) {
+//     //Demender un mot a l'utilisateur et affiche le nombre d'occurence du caractere
+    
+//     let nombreDeCaractere = 0; 
+
+//     for (let i = 0; i < mot.length; i++) {
+//         if (mot[i] === caractere) {
+//             //incremente de 1 le nombre de caractere contenu dans le mot 
+//             nombreDeCaractere++;
+//             //Affiche le nombre de caractere contenu dans le mot
+            
+//         }
+        
+        
+//     }console.log("Le nombre de caractere contenu dans le mot est de "+nombreDeCaractere);
+// } 
+// occuStr(usermot, usercaractere);
+
+// avec Match
+
+// function occuStr(mots, lettre) {
+//     mots = prompt("entrez un mot");
+//     lettre = prompt("entrez un caractere");
+
+//     const regex = new RegExp(caractere, 'gi');
+//     const found = mot.match(regex);
+
+//     return console.log(found.length);
+// } occuStr()
+
+
+///////////////EXERCICE 2//////////////
+
+//fonction qui demande un mot a l'utilisateur et qui affiche le nombre de lettre contenu dans ce mot
+// let usermot = prompt("Entrez un mot");
+
+// function longueurStr(mot) {
+//     return console.log(usermot+ " contient " +mot.length+ " caractere");
+// }
+// longueurStr(usermot);
+
+
+///////////////EXERCICE 3//////////////
+
+// let userphrase = prompt("entrez un mot");
+// let userdeletecaractere = prompt("entrerz un caractere");
+// //fonction qui demande une phrase a l'utilisateur et qui supprime le caractere demandé
+
+// function suppr(phrase, deletecaractere) {
+//     // Créer une nouvelle chaine vide qui va stocker le résultat
+//     let nouvellePhrase = "";
+
+//     //boucle qui va parcourir chaque caractere de la phrase
+//     for (let i = 0; i < phrase.length; i++) {
+//         //si la lettre est different du caractere supprimé
+//         if (phrase[i] != deletecaractere) {
+//             //Ajouter la lettre à la nouvelle chaine
+//             nouvellePhrase += phrase[i];
+//         }
+        
+//     }
+//     return nouvellePhrase;
+// } 
+// const result = suppr(userphrase, userdeletecaractere);
+// console.log(result);
+
+/// Avec le replace
+
+// let userphrase = prompt("entrez un mot");
+// let userdeletecaractere = prompt("entrerz un caractere");
+
+// function suppr(phrase, deletcaractere) {
+//     // Utiliser la méthode replaceAll pour supprimer le caractere spécifié
+//     return phrase.replaceAll(deletcaractere, "");
+// }
+// const result = suppr(userphrase, userdeletecaractere);
+// console.log(result);
+
+
+///////////////EXERCICE 6//////////////
+
+///////////////partie 1//////////////
+
+// Demander un mot a l'utilisateur 
+// let mot = prompt("mettre un mot");
+
+// //fonction qui va permettre d'inverser une chaine de caractere
+// function reverseMot(mot) {
+//     let motReverse = "";
+//     for (let i = mot.length -1; i>=0; i--) {
+//         motReverse += mot[i];
+        
+//     }
+//     return motReverse ;
+// }
+
+// // Inverse le mot
+// let motReverse = reverseMot(mot);
+
+// // Comparaison du mot d'origine avec le mot inverser
+// if (mot.toLowerCase() == motReverse.toLowerCase()) {
+//     console.log("le mot est un palindrome");
+// } else {
+//     console.log("le mot n'est pas un palindrome");
+// }
+
+///////////////partie 2//////////////
+
+// fonction pour inverser la phrase 1
+function isPalindrome(mot) {
+    function inverserMot(mot) {
+        return mot.split('').reverse().join('');
+
+    }
+    //fonction qui va supprimer la ponctuation et les espace 2
+    function NettoyageMot(mot) {
+        return mot.replace(/[.,/#!$%^&*;:{}=-_'`~()?\s]/g, '');
+    }
+
+    // comparer le mot d'origine et le mot inverser
+    nouveauMot = NettoyageMot(mot).toLowerCase();
+    let motInverse = inverserMot(nouveauMot).toLowerCase();
+
+    return nouveauMot == motInverse;
+}
+
+const expressions = ["Elle", "rotor", "élu par cette crapule"];
+
+for (let expression of expressions) {
+    if (isPalindrome(expression)) {
+        console.log(`${expression} est un palindrome` );
+    } else {
+        console.log(`${expression}n'est pas un palindrome` );
+    }
 }
